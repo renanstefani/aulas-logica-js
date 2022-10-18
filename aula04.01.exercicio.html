@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        
+        <button onclick='somar()'>+</button>
+        <button onclick='subtrair()'>-</button>
+        <button onclick='multiplicar()'>*</button>
+        <button onclick='dividir()'>/</button>
+        
+        <div id="resultado">
+            
+        </div>
+        
+        
+        <script>
+            //mantive a primeira execução para comparar a evolução em breve
+
+            
+            //Solicitar valor inicial e converter
+            var i = prompt('Qual o valor inicial da operação?');
+            i = parseFloat(i);
+
+            //Exibir valor inicial
+            resultado.innerHTML = i;
+
+            //realizar adição
+            function somar(){
+                var soma = prompt('Valor a ser somado: ');
+                soma = parseFloat(soma);
+                i += soma;
+                resultado.innerHTML = i;
+            }
+
+            //realizar subtração
+            function subtrair(){
+                var subt = prompt('Valor a ser subtraído: ');
+                subt = parseFloat(subt);
+                i -= subt;
+                resultado.innerHTML = i;
+            }
+
+            //realizar multiplicação
+            function multiplicar(){
+                var multp = prompt('Valor a ser multiplicado: ');
+                multp = parseFloat(multp);
+                i *= multp;
+                resultado.innerHTML = i;
+            }
+
+            //realizar divisão
+            function dividir(){
+                var divid = prompt('Valor a ser multiplicado: ');
+                divid = parseFloat(divid);
+                i /= divid;
+                resultado.innerHTML = i;
+            }
+            
+
+        </script>
+    </body>
+</html>

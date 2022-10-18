@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">*</button>
+        <button onclick="iniciarCalculo('/')">/</button>
+        
+        <div id="output"></div>
+        
+        
+        <script>
+            
+            var n2 = prompt('Qual o valor inicial da operação?');
+            n2 = parseFloat(n2);
+
+            //Exibir valor 
+            exibirRes(n2);
+
+            function iniciarCalculo(simbolo){
+                var n1 = document.querySelector('#output').textContent;
+
+                var n2 = prompt('Digite outro número:');
+                n2 = parseFloat(n2);
+
+                var res = calcular(simbolo, n1, n2);
+
+                exibirRes(res);
+            }
+
+            function exibirRes(resultado){
+                var output = document.querySelector('#output');
+                output.innerHTML = resultado;
+            }
+
+            function calcular(simbolo, n1, n2){
+
+                var resultadoPronto = null;
+
+                switch(simbolo){
+                    case '+':
+                        resultadoPronto = n1 + n2;
+                        break;
+                    case '-':
+                        resultadoPronto = n1 - n2;
+                        break;
+                    case '*':
+                        resultadoPronto = n1 * n2;
+                        break;
+                    case '/':
+                        resultadoPronto = n1 / n2;
+                        break;
+                }
+
+                return resultadoPronto;
+            }
+
+        </script>
+    </body>
+</html>

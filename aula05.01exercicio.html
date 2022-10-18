@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <button onclick="mostrarAreaAlert()">Mostrar área como alert</button>
+
+        <button onclick="mostrarAreaOutput()">Mostrar área no output</button>
+
+        <div id="output"></div>
+
+        <script>
+            mostrarAreaAlert();
+
+            
+            //criar function para mostrar area em um alert
+            function mostrarAreaAlert(){
+                var largura = prompt('Digite a largura:');
+                largura = parseFloat(largura);
+                
+                var altura = prompt('Digite a altura:');
+                altura = parseFloat(altura);
+                
+                try{
+                    var resultadoFinal = calcularArea(largura, altura);
+                } catch(e){
+                    resultadoFinal = e;
+                }
+                
+                alert(resultadoFinal);
+            }
+            
+            
+            //criar function para mostrar area no output
+            function mostrarAreaOutput(){
+                var largura = prompt('Digite a largura:');
+                largura = parseFloat(largura);
+                
+                var altura = prompt('Digite a altura:');
+                altura = parseFloat(altura);
+                
+                try{
+                    var resultadoFinal = calcularArea(largura, altura);
+                } catch(e){
+                    resultadoFinal = e;
+                }
+                
+                document.querySelector('#output').innerHTML = "Área total: " + resultadoFinal;
+                
+            }
+            
+            
+            //criar function para realizar o calculo
+            function calcularArea(l, a){
+                if (l === undefined || a === undefined) {
+                    throw new Error ('Não foi definido altura ou largura, reinicie a operação.');
+                }
+
+                if( isNaN(l) || isNaN(a) ){
+                    throw new Error('Apenas números são aceitos.');
+                }
+                return l * a;
+            }
+            
+
+        </script>
+
+    </body>
+</html>

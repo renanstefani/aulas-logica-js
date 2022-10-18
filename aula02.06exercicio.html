@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+            var nota1 = parseInt(prompt('Valor da primeira nota.'));
+
+            var nota2 = parseInt(prompt('Valor da segunda nota.'));
+
+            var media = (nota1 + nota2) / 2;
+
+            if(media <= 5 || nota1 === 0 || nota2 === 0){
+                alert('Desculpe, você foi reprovado.');
+            } else{
+                alert('Parabéns, você foi aprovado!');
+            }
+
+            
+        </script>
+        
+
+    </body>
+</html>

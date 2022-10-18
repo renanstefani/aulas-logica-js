@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+
+            var num1 = parseFloat(prompt('Jogador 1, digite um número: '));
+
+            var num2 = parseFloat(prompt('Jogador 2, digite outro número: '));
+
+            
+            if(num1 === num2){
+                alert('Empate, competição encerrada.');
+            } else {
+                var sorteio = parseInt(Math.random() * 2);
+
+                if(sorteio === 0){
+                    
+                    if(num1 < num2){
+                        alert('O jogador 1 venceu!');
+                    } else{
+                        alert('O jogador 2 venceu!');
+                    }
+
+                } else {
+
+                        if(num1 > num2){
+                            alert('O jogador 1 venceu!');
+                        } else{
+                            alert('O jogador 2 venceu!');
+                        }
+                }
+            }
+            
+        </script>
+
+            
+
+            
+
+            
+
+    </body>
+</html>

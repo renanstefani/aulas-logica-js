@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+            var numero = parseFloat(prompt('Digite um número: '));
+
+            var indice = 1;
+
+            while(indice <= 100){
+                document.write(numero + ' x ' + indice + ' = ' + (numero * indice) + '<br>');
+
+                indice = indice + 1;
+            }
+            document.write('Fim da multiplicação.');
+            
+            
+        </script>
+
+    </body>
+</html>

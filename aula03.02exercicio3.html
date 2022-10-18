@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+            
+            
+            let ano = 1004;
+
+            while (ano < 2017) {
+                
+                if(!(ano % 100 === 0) || (ano % 400 === 0)){
+                    document.write(ano + '<br>');
+                } else{
+                    document.write(ano + ' Não é bissexto <br>');
+                }
+
+                
+
+                ano += 4;
+            } 
+
+            document.write('<br>' + 'Fim do exercício.');
+            
+            
+        </script>
+
+    </body>
+</html>

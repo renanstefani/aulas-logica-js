@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        
+        <button onclick="calcular('+')">+</button>
+        <button onclick="calcular('-')">-</button>
+        <button onclick="calcular('*')">*</button>
+        <button onclick="calcular('/')">/</button>
+        
+        <div id="output"></div>
+        
+        
+        <script>
+            //Versão feita pelo professor, com function melhor aplicada
+            
+            var n1 = prompt('Qual o valor inicial da operação?');
+            n1 = parseFloat(n1);
+
+            //Exibir valor 
+            escreve();
+
+            function escreve(){
+                var output = document.querySelector('#output');
+                output.innerHTML = n1;
+            }
+
+            
+            function calcular(simbolo){
+                var n2 = prompt('Digite outro número: ');
+                n2 = parseFloat(n2);
+                
+                switch(simbolo){
+                    case '+':
+                        n1 += n2;
+                        break;
+                    case '-':
+                        n1 -= n2;
+                        break;
+                    case '*':
+                        n1 *= n2;
+                        break;
+                    case '/':
+                        n1 /= n2;
+                        break;
+                }
+                escreve();
+            }
+
+        </script>
+    </body>
+</html>

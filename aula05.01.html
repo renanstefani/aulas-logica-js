@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">*</button>
+        <button onclick="iniciarCalculo('/')">/</button>
+        
+        <div id="output"></div>
+        
+        
+        <script>
+            
+            var n2 = prompt('Qual o valor inicial da operação?');
+            n2 = parseFloat(n2);
+
+            //Exibir valor 
+            escreve(n2);
+
+            function iniciarCalculo(simbolo){
+                var n1 = document.querySelector('#output').textContent;
+                n1 = parseFloat(n1);
+
+                var n2 = prompt('Digite outro número');
+                n2 = parseFloat(n2);
+
+                try{
+                    var msg = calcular(simbolo, n1, n2);
+                } catch(e){
+                    alert(e);
+                    return;
+                }
+                
+
+                escreve(msg);
+            }
+
+            function escreve(mensagem){
+                var output = document.querySelector('#output');
+                output.innerHTML = mensagem;
+            }
+
+            
+            function calcular(simbolo, n1, n2){
+                console.log(simbolo);
+
+                if( simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/'){
+                    throw new Error('Operação inválida.');
+                }
+
+                if( isNaN(n1) || isNaN(n2) ){
+                    throw new Error('Apenas números são aceitos.');
+                }
+
+
+                
+                var numeroCalculado = null;
+                
+                switch(simbolo){
+                    case '+':
+                        numeroCalculado = n1 + n2;
+                        break;
+                    case '-':
+                        numeroCalculado = n1 - n2;
+                        break;
+                    case '*':
+                        numeroCalculado = n1 * n2;
+                        break;
+                    case '/':
+                        numeroCalculado = n1 / n2;
+                        break;
+                }
+
+                return numeroCalculado;
+            }
+
+        </script>
+    </body>
+</html>

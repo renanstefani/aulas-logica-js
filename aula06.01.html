@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan Stefani">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+
+        <div id="output"></div>
+
+        <script>
+            
+            var produtos = new Array('Caneta', 'Lápis', 'Tesoura', 'Borracha', 'Caderno', 'Livro');
+
+            produtos.push('Compasso', 'Cartolina');
+            
+            var output = document.querySelector('#output');
+
+            var msg = '';
+            
+            for (var i = 0; i < produtos.length; i++){
+                msg += 'Produto ' + (i + 1) + ': ' + produtos[i] + ' <br>';
+            }
+
+            output.innerHTML = msg;
+
+        </script>
+
+    </body>
+</html>

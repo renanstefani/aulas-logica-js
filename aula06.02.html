@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <div id="output"></div>
+
+        <script>
+            var produtos = new Array ('caneta', 'lapis', 'borracha');
+
+            var caneta = new Object();
+
+            /* Propriedades */
+            caneta.nome = 'Caneta';
+            caneta.preco = 1.5;
+            caneta.quant = 45;
+            
+            /* Métodos */
+            caneta.comprar = function(qtd) {
+                if(!qtd) {
+                    qtd = 1;
+                }
+                console.log('comprou caneta');
+                this.quant = this.quant - qtd;
+                
+            }
+            
+            
+            var msg = '';
+            
+            msg += 'Nome: ' + caneta.nome + '<br>';
+            msg += 'Preço: ' + caneta.preco + '<br>';
+            msg += 'Estoque: ' + caneta.quant + '<br>';
+            
+            document.querySelector('#output').innerHTML = msg;
+            
+            
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+            var arr = new Array(25, 30, 45, 28, 0, 12);
+
+            
+            var somaFinal = somaPares(arr);
+            alert('A soma dos valores pares é: ' + somaFinal);
+            
+            function somaPares(arr){
+                var soma = 0;
+                
+                for(var i = 0; i < arr.length; i++){
+                    console.log(i);
+                    console.log(arr[i]);
+                    
+                    if( !isNaN(arr[i]) && arr[i] % 2 === 0){
+                        soma += arr[i];
+                    }
+                    
+                    
+                }
+                
+                return soma;
+            }
+
+            
+            
+
+            //mostrar na tela a soma dos números pares da array acima
+        </script>
+
+    </body>
+</html>

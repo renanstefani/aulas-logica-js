@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Lógica">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        
+        <button onclick='somar()'>+</button>
+        <button onclick='subtrair()'>-</button>
+        <button onclick='multiplicar()'>*</button>
+        <button onclick='dividir()'>/</button>
+        
+        <div id="output"></div>
+        
+        
+        <script>
+            //Versão feita pelo professor, com function melhor aplicada
+            
+            var n1 = prompt('Qual o valor inicial da operação?');
+            n1 = parseFloat(n1);
+
+            //Exibir valor 
+            escreve();
+
+            function escreve(){
+                var output = document.querySelector('#output');
+                output.innerHTML = n1;
+            }
+
+            //realizar adição
+            function somar(){
+                var n = prompt('Digite outro número: ');
+                n = parseFloat(n);
+                
+                n1 += n;
+                escreve();
+            }
+
+            //realizar subtração
+            function subtrair(){
+                var n = prompt('Digite outro número: ');
+                n = parseFloat(n);
+                
+                n1 -= n;
+                escreve();
+            }
+
+            //realizar multiplicação
+            function multiplicar(){
+                var n = prompt('Digite outro número: ');
+                n = parseFloat(n);
+                
+                n1 *= n;
+                escreve();
+            }
+
+            //realizar divisão
+            function dividir(){
+                var n = prompt('Digite outro número: ');
+                n = parseFloat(n);
+                
+                n1 /= n;
+                escreve();
+            }
+            
+
+        </script>
+    </body>
+</html>
